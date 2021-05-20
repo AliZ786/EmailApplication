@@ -26,7 +26,10 @@ public class Email {
         System.out.println("Selected department is: " +this.department);
 
 
-    }1
+    }
+    /*
+        Method to select current department
+     */
 
     private String selectDepartment() {
         System.out.println("Enter the department\n1. For sales\n2. For development\n3. For accounting\n 0. To return to previous menu");
