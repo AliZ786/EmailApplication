@@ -1,5 +1,4 @@
 package emailapp;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Email {
@@ -9,9 +8,40 @@ public class Email {
     private String password;
     private String department;
     private String email;
-    private int mailCapacity;
+    private int mailCapacity = 500;
     private String altEmail;
     private int defaultPasswordLength =10;
+
+
+    /**
+     * Getters and setters
+     */
+
+    public void setMailCapacity(int mailCapacity) {
+        this.mailCapacity = mailCapacity;
+    }
+
+    public int getMailCapacity() {
+        return mailCapacity;
+    }
+
+    public void setAltEmail(String altEmail) {
+        this.altEmail = altEmail;
+    }
+
+    public String getAltEmail() {
+        return altEmail;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+
 
     /**
      * Constructor which creates an email given someone's name
@@ -23,7 +53,9 @@ public class Email {
 
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("Email created for " + this.firstName + " " + this.lastName);
+        System.out.println();
+        System.out.println("****** Email created for " + this.firstName + " " + this.lastName + " *******");
+        System.out.println();
 
         this.department = selectDepartment();
         System.out.println("Selected department is: " +this.department);
@@ -34,6 +66,7 @@ public class Email {
 
         email = firstName.toLowerCase() + lastName.toLowerCase() + "@" +department + ".company.com";
         System.out.println("Your email address is: " +this.email);
+        System.out.println();
 
     }
     /*
@@ -41,10 +74,11 @@ public class Email {
      */
 
     private String selectDepartment() {
-        System.out.println("Enter the department\n1. For sales\n2. For development\n3. For accounting\n 0. To return to previous menu");
+        System.out.println("Enter the department\n1. For sales\n2. For development\n3. For accounting\n0. To return to previous menu");
         Scanner saleInput = new Scanner(System.in);
 
         int depChoice = saleInput.nextInt();
+        System.out.println();
 
         if (depChoice == 1) {
             return "sales";
@@ -75,5 +109,13 @@ public class Email {
         }
             return new String(password);
     }
+
+    public String showInfo(){
+
+        return "Display Name: " + firstName +" " + lastName +"\n"
+                + "Company Email: " + email +'\n' +
+                "Mailbox Capacity: " +mailCapacity + "mb";
+    }
+
 }
 
