@@ -2,5 +2,8 @@ package studentdbapp;
 
 public class StudentDBApp {
 
-    Student student1 = new Student();
+    public static void main(String args[]) {
+        Student student1 = new Student();
+
+    }
 }

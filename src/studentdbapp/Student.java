@@ -20,6 +20,7 @@ public class Student {
 
 
     public Student() {
+        System.out.println();
         Scanner input = new Scanner(System.in);
         System.out.print("Enter student's first name: ");
         this.fName = input.nextLine();
@@ -27,7 +28,7 @@ public class Student {
         System.out.print("Enter student's last name: ");
         this.lName = input.nextLine();
 
-        System.out.print("Enter student's current grade level:\n1- Freshmen\n2-Sophomore\n3-Junior\n4-Senior");
+        System.out.println("Enter student's current grade level:\n1- Freshmen\n2-Sophomore\n3-Junior\n4-Senior");
         this.currentYear = input.nextInt();
 
         switch(this.currentYear){
@@ -49,7 +50,7 @@ public class Student {
                 break;
 
         }
-        System.out.println(fName + lName +"\n" +year);
+        System.out.println(fName + " " + lName +"\n" +year);
 
 
 
