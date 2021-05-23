@@ -1,5 +1,7 @@
-# EmailApplication
+# Java Projects
 
-<h1> Small email administration application project created from Java </h1>
+<h1> Project 1: Email Administration Application </h1>
+  
+<h2> Small email administration application project created from Java </h2>
 
-<strong> Description: </strong> <p> Creation of a corporate email account based of somone's name </p>
+<strong> <p> Description: Creation of a corporate email account based of somone's name </p> </strong>
