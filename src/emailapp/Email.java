@@ -1,4 +1,5 @@
 package emailapp;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Email {
@@ -7,6 +8,7 @@ public class Email {
     private String lastName;
     private String password;
     private String department;
+    private String email;
     private int mailCapacity;
     private String altEmail;
     private int defaultPasswordLength =10;
@@ -28,6 +30,10 @@ public class Email {
 
         this.password = randomPassword(defaultPasswordLength);
         System.out.println("Your password is: " +this.password);
+
+
+        email = firstName.toLowerCase() + lastName.toLowerCase() + "@" +department + ".company.com";
+        System.out.println("Your email address is: " +this.email);
 
     }
     /*
