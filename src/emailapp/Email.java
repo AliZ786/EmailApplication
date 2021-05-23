@@ -9,6 +9,7 @@ public class Email {
     private String department;
     private int mailCapacity;
     private String altEmail;
+    private int defaultPasswordLength =10;
 
     /**
      * Constructor which creates an email given someone's name
@@ -25,6 +26,8 @@ public class Email {
         this.department = selectDepartment();
         System.out.println("Selected department is: " +this.department);
 
+        this.password = randomPassword(defaultPasswordLength);
+        System.out.println("Your password is: " +this.password);
 
     }
     /*
@@ -49,6 +52,22 @@ public class Email {
         else
             return "";
 
+    }
+
+    /**
+     * Method which generates a random password
+     * @param length
+     * @return
+     */
+    private String randomPassword(int length){
+        String placeholderPass = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*1234567890";
+        char[] password = new char[length];
+        for (int i =0 ; i <length; i++){
+            int random = (int) (Math.random() * placeholderPass.length());
+            password[i] = placeholderPass.charAt(random);
+
+        }
+            return new String(password);
     }
 }
 
