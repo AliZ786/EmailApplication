@@ -95,4 +95,13 @@ public class Student {
         System.out.println("Enrolled in: " +courses );
         System.out.println("Tuition balance: " +tuition);
     }
+
+    /**
+     * Method to view balance
+     */
+
+    public void viewBalance(){
+        System.out.println("Your balance is: " +tuition +"$");
+
+    }
 }
