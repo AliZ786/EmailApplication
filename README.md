@@ -1,10 +1,10 @@
 # Java Projects
 
 <h1> Project 1: Email Administration Application </h1>
-  
-<h2> Small email administration application project created from Java </h2>
 
-<strong> <p> Description: Creation of a corporate email account based of somone's name </p> </strong>
+Description: Creation of a corporate email account based of somone's name 
 
 
-<h1> Project 2: Student Database Application <h1>
+<h1> Project 2: Student Database Application </h1>
+ 
+  Description: Create a student enrollment application with tuition balance and courses 
