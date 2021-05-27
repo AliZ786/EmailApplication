@@ -17,8 +17,10 @@ public abstract class Account implements IBaseRate {
         index++;
         this.accountNum = setAccountNum();
 
-
+        setRate();
     }
+
+    public abstract void setRate();
 
     public String setAccountNum() {
         String lastTwoDigitsOfSN = serialNumber.substring(serialNumber.length()-2, serialNumber.length());
@@ -26,6 +28,28 @@ public abstract class Account implements IBaseRate {
         int randomNum = (int) (Math.random() * Math.pow(10,3));
         return lastTwoDigitsOfSN + uniqueID +randomNum;
 
+    }
+
+    public void deposit(double amount){
+        balance = balance + amount;
+        System.out.println("Depositing " +amount +"$");
+        printBalance();
+    }
+
+    public void withdraw(double amount){
+        balance = balance - amount;
+        System.out.println("Withdrawing " +amount +"$");
+        printBalance();
+    }
+
+    public void transfer(String toWhere, double amount){
+        balance = balance -amount;
+        System.out.println("Transferring " +amount +"$ " +"to " +toWhere);
+        printBalance();
+    }
+
+    public void printBalance(){
+        System.out.println("Your current balance is " +balance +"$");
     }
 
     public void showInfo(){

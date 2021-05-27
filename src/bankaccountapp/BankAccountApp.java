@@ -11,5 +11,11 @@ public class BankAccountApp {
         check1.showInfo();
         System.out.println();
         sav1.showInfo();
+        System.out.println();
+
+        check1.deposit(200);
+        sav1.withdraw(2000);
+        check1.transfer("Real estate", 500);
+
     }
 }

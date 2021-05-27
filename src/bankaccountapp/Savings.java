@@ -28,12 +28,18 @@ public class Savings extends Account {
 
     }
 
+    @Override
+    public void setRate(){
+        rate = getBaseRate() - 0.25;
+
+    }
+
     /**
      * Show info method for the savings account
      */
 
     public void showInfo(){
         super.showInfo();
-        System.out.println("Account type: Savings" +"\nDeposit Box ID: "+depositBoxID +"\nDeposit Box Key: "+depositBoxKey);
+        System.out.println("Account type: Savings" +"\nDeposit Box ID: "+depositBoxID +"\nDeposit Box Key: "+depositBoxKey +"\nRate: " +rate +"%");
     }
 }

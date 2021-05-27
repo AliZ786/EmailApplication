@@ -30,12 +30,17 @@ public class Checking extends Account{
 
     }
 
+    @Override
+    public void setRate(){
+        rate = getBaseRate() *0.15;
+    }
+
     /**
      * Show info method for the checking account
      */
 
     public void showInfo(){
         super.showInfo();
-        System.out.println("Account type: Checking" +"\nDebit card number: "+debitCardNumber +"\nDebit card PIN: "+PIN);
+        System.out.println("Account type: Checking" +"\nDebit card number: "+debitCardNumber +"\nDebit card PIN: "+PIN +"\nRate: " +rate +"%");
     }
 }
