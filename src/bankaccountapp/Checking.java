@@ -2,8 +2,8 @@ package bankaccountapp;
 
 public class Checking extends Account{
 
-    int debitCardNumber;
-    int PIN;
+    private int debitCardNumber;
+    private int PIN;
 
 
     /**

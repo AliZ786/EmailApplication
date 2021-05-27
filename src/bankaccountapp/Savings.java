@@ -2,8 +2,8 @@ package bankaccountapp;
 
 public class Savings extends Account {
 
-    int depositBoxID;
-    int depositBoxKey;
+    private int depositBoxID;
+    private int depositBoxKey;
 
     /**
      * Constructor to create a savings account
