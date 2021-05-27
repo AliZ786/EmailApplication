@@ -12,4 +12,4 @@ Description: Creation of a corporate email account based of somone's name
   
 <h1> Project 3: Bank Account Management Application </h1>
  
-  Description: Create a bank account management application with balance for savings and checking accounts 
+  Description: Create a bank account management application with balance for savings and checking accounts. Can read bank accounts details through a file or create your own.
